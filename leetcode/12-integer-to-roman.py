@@ -1,0 +1,35 @@
+class Solution(object):
+    def intToRoman(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+        pairs = [
+            (1000, "M"),
+            (900, "CM"),
+            (500, "D"),
+            (400, "CD"),
+            (100, "C"),
+            (90, "XC"),
+            (50, "L"),
+            (40, "XL"),
+            (10, "X"),
+            (9, "IX"),
+            (5, "V"),
+            (4, "IV"),
+            (1, "I"),
+        ]
+
+        ans = []
+
+        for value, symbol in pairs:
+            while num >= value:
+                ans.append(symbol)
+                num -= value
+
+        return "".join(ans)
+
+
+solution = Solution()
+result = solution.intToRoman(3749)
+print(result)
