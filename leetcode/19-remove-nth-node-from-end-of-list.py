@@ -1,14 +1,7 @@
-# Definition for singly-linked list.
-from ast import dump
-
-
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-
 ## Fast - Slow approach
+from leetcode.list_node import ListNode
+
+
 class Solution(object):
     def removeNthFromEnd(self, head, n):
         """
